@@ -19,6 +19,7 @@
 #include "vendor/imgui/imgui_impl_opengl3.h"
 #include "test/testClearColor.h"
 #include "test/testTexture2D.h"
+#include "test/testTriangle.h"
 
 GLFWwindow* InitWindow()
 {
@@ -91,6 +92,7 @@ int main( void )
         current_test = menu;
         menu->register_test<test::testClearColor>("Clear Color");
         menu->register_test<test::testTexture2D>("Texture");
+        menu->register_test<test::testTriangle>("Triangle");
     
         init_imGui(window);
         do {

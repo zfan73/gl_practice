@@ -13,7 +13,7 @@ indexBuffer :: indexBuffer(const unsigned int *data, unsigned int count)
 
 indexBuffer :: ~indexBuffer()
 {
-      callBack(glDeleteBuffers(1, &m_render_id));
+    callBack(glDeleteBuffers(1, &m_render_id));
 }
 
 void indexBuffer:: bind() const
