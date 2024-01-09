@@ -16,5 +16,5 @@ class texture
         void unbind() const;
         inline unsigned int getWidth() const {return m_width;};
         inline unsigned int getHeight() const {return m_height;};
-
+        inline unsigned int getID() const {return m_render_id;};
 };

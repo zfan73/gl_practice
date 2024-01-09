@@ -20,6 +20,7 @@
 #include "test/testClearColor.h"
 #include "test/testTexture2D.h"
 #include "test/testTriangle.h"
+#include "test/testRectangle.h"
 
 GLFWwindow* InitWindow()
 {
@@ -92,7 +93,8 @@ int main( void )
         current_test = menu;
         menu->register_test<test::testClearColor>("Clear Color");
         menu->register_test<test::testTexture2D>("Texture");
-        menu->register_test<test::testTriangle>("Triangle");
+        menu->register_test<test::testTriangle>("Batch Triangle");
+        menu->register_test<test::testRectangle>("Batch Rectangle");
     
         init_imGui(window);
         do {

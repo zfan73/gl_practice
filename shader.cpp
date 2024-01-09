@@ -16,8 +16,7 @@ m_render_id(0), file_path(filepath)
 shader :: ~shader()
 {
     callBack(glDeleteProgram(m_render_id));
-}
-
+}        void setUniform1iv(std::string name, const int *value);
 void shader :: bind() const
 {
     callBack(glUseProgram(m_render_id));
@@ -31,6 +30,11 @@ void shader :: unbind() const
 void shader :: setUniform1i(std::string name, int value)
 {
     callBack(glUniform1i(getUniformLocation(name),value));
+}
+
+void shader :: setUniform1iv(std::string name, int count, const int *value)
+{
+    callBack(glUniform1iv(getUniformLocation(name), count, value));
 }
 
 void shader :: setUniform4f(std::string name, float v0, float v1, float v2, float v3)
